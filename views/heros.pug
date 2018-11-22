@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+    each val in data
+       .row
+          .col-6
+               .card.blue-grey
+                   .card-content 
+                       p Character id: #{val.id}
+                       p Super Hero: #{val.superhero}
+                       p Real Name : #{val.alter_ego}
+                       p Publisher : #{val.publisher}
+                       p Characters: #{val.characters}
+                   .card-action
+                       a(href='deleteRow?id='+val.id) Delete
+                       a(href='viewRow?id='+val.id) view
+                   
